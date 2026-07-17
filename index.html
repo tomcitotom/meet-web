@@ -3,222 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meet — Diseño Industrial</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <title>Meet — Mesa + Sillines</title>
 
-<body>
+  <style>
+    /* -------------------- ESTILOS GENERALES -------------------- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
+    h2 {
+      margin-bottom: 10px;
+    }
 
-      <h1 class="hero-logo">MEET</h1>
+    /* -------------------- ANIMACIONES -------------------- */
 
-      <h2 class="hero-title">Meet</h2>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
 
-      <p class="hero-subtitle">Mesa + Sillín — Diseño argentino, moderno y funcional</p>
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-      <div class="hero-image">
-        <img src="img/meet-hero.jpg" alt="Set Meet — Mesa y Sillín">
-      </div>
+    .contacto-button {
+      transition: all 0.3s ease;
+    }
 
-      <a href="#concepto" class="hero-button">Explorar</a>
+    .contacto-button:hover {
+      transform: translateY(-3px);
+      background-color: #000;
+      color: #fff;
+    }
 
-    </div>
-  </section>
+    .galeria-grid img {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 
+    .galeria-grid img:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
 
-  <!-- CONCEPTO -->
-  <section class="concepto" id="concepto">
-    <div class="concepto-content">
+    .sobre-foto img {
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fotoFade 0.9s ease forwards;
+    }
 
-      <h2 class="concepto-title">Concepto</h2>
+    @keyframes fotoFade {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
-      <p class="concepto-text">
-        Meet nace como una solución simple y funcional para espacios de estudio y trabajo compartido. 
-        Un punto de encuentro donde las ideas fluyen y las personas se conectan.
-      </p>
+    .whatsapp-float {
+      animation: floatPulse 2s infinite ease-in-out;
+    }
 
-      <p class="concepto-text">
-        Diseñado para entornos de alto tránsito, Meet combina ligereza, durabilidad y una estética 
-        minimalista que se integra en cualquier ambiente. Su estructura geométrica y su asiento 
-        tejido lo convierten en un objeto versátil, pensado para acompañar procesos creativos, 
-        reuniones espontáneas y momentos de colaboración.
-      </p>
+    @keyframes floatPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
 
-    </div>
-  </section>
-
-
-  <!-- GALERÍA -->
-  <section class="galeria" id="galeria">
-    <div class="galeria-content">
-
-      <h2 class="galeria-title">Galería</h2>
-      <p class="galeria-subtitle">Meet en detalle</p>
-
-      <div class="galeria-grid">
-
-        <div class="galeria-item">
-          <img src="img/meet-1.jpg" alt="Mesa Meet">
-        </div>
-
-        <div class="galeria-item">
-          <img src="img/meet-2.jpg" alt="Sillín Meet">
-        </div>
-
-        <div class="galeria-item">
-          <img src="img/meet-3.jpg" alt="Set Meet completo">
-        </div>
-
-        <div class="galeria-item">
-          <img src="img/meet-4.jpg" alt="Mesa Meet en exterior">
-        </div>
-
-        <div class="galeria-item">
-          <img src="img/meet-5.jpg" alt="Sillín Meet en exterior">
-        </div>
-
-        <div class="galeria-item">
-          <img src="img/meet-6.jpg" alt="Set Meet en contexto urbano">
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- CARACTERÍSTICAS TÉCNICAS -->
-  <section class="caracteristicas" id="caracteristicas">
-    <div class="caracteristicas-content">
-
-      <h2 class="caracteristicas-title">Características técnicas</h2>
-      <p class="caracteristicas-subtitle">Materiales, medidas y opciones</p>
-
-      <div class="caracteristicas-grid">
-
-        <div class="caracteristicas-col">
-
-          <h3 class="caracteristicas-heading">Materialidad</h3>
-          <ul class="caracteristicas-list">
-            <li>Hierro liso de sección circular Ø14 mm</li>
-            <li>Vidrio laminado 3x3 Ø1000 mm</li>
-            <li>Cordón de polipropileno trenzado</li>
-            <li>Pintura 3 en 1 del color a elección</li>
-            <li>Laca esmalte protectora</li>
-          </ul>
-
-          <h3 class="caracteristicas-heading">Medidas</h3>
-          <ul class="caracteristicas-list">
-            <li>Mesa: Ø1000 mm — altura 450 mm</li>
-            <li>Sillín: altura 450 mm — asiento tejido</li>
-            <li>Estructura geométrica de tres apoyos</li>
-          </ul>
-
-          <h3 class="caracteristicas-heading">Estructura</h3>
-          <ul class="caracteristicas-list">
-            <li>Soldadura continua</li>
-            <li>Ensamble limpio</li>
-            <li>Geometría estable y ligera</li>
-          </ul>
-
-        </div>
-
-        <div class="caracteristicas-col">
-
-          <h3 class="caracteristicas-heading">Personalización</h3>
-          <ul class="caracteristicas-list">
-            <li>Combinación libre de colores</li>
-            <li>Cantidad de sillines por set a elección</li>
-            <li>Adaptación de tonos según ambiente</li>
-          </ul>
-
-          <h3 class="caracteristicas-heading">Durabilidad</h3>
-          <ul class="caracteristicas-list">
-            <li>Estructura metálica de alta resistencia</li>
-            <li>Pintura protectora para uso intensivo</li>
-            <li>Vidrio laminado seguro y estable</li>
-          </ul>
-
-          <h3 class="caracteristicas-heading">Funcionalidad</h3>
-          <ul class="caracteristicas-list">
-            <li>Ligero</li>
-            <li>Fácil de mover</li>
-            <li>Sillines apilables</li>
-            <li>Ideal para espacios de trabajo y estudio</li>
-          </ul>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- SOBRE EL DISEÑADOR -->
-  <section class="sobre" id="sobre">
-    <div class="sobre-content">
-
-      <h2 class="sobre-title">Sobre el diseñador</h2>
-
-      <div class="sobre-grid">
-
-        <div class="sobre-foto">
-          <img src="img/tomas.jpg" alt="Tomas José Velázquez">
-        </div>
-
-        <div class="sobre-texto">
-          <h3 class="sobre-nombre">Tomas José Velázquez</h3>
-
-          <p class="sobre-descripcion">
-            Diseñador industrial nacido en Neuquén, Argentina. Apasionado por crear objetos simples,
-            funcionales y honestos, con una estética contemporánea y un enfoque centrado en el usuario.
-          </p>
-
-          <p class="sobre-descripcion">
-            Meet surge como una exploración sobre cómo el diseño puede mejorar los espacios de estudio
-            y trabajo compartido, generando puntos de encuentro donde las ideas fluyen y las personas
-            se conectan.
-          </p>
-
-          <p class="sobre-descripcion">
-            Estudiante de Diseño Industrial, con interés en estructuras metálicas, mobiliario liviano
-            y soluciones para entornos colaborativos.
-          </p>
-
-          <div class="sobre-contacto">
-            <p>Email: <strong>tomijvela@gmail.com</strong></p>
-            <p>Instagram: <strong>@tom_velazquez_</strong></p>
-            <p>Neuquén Capital, Argentina</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- CONTACTO -->
-  <section class="contacto" id="contacto">
-    <div class="contacto-content">
-
-      <h2 class="contacto-title">Contacto</h2>
-      <p class="contacto-subtitle">Hablemos sobre Meet</p>
-
-      <div class="contacto-info">
-        <p><strong>Email:</strong> tomijvela@gmail.com</p>
-        <p><strong>Teléfono:</strong> 0299 532 2203</p>
-        <p><strong>Instagram:</strong> @tom_velazquez_</p>
-      </div>
-
-      <a href="mailto:tomijvela@gmail.com" class="contacto-button">Enviar mensaje</a>
-
-    </div>
-  </section>
-
-</body>
-</html>
+    /* -------------------- BOTÓN FLOTANTE ----------------
